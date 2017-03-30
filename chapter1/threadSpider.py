@@ -19,7 +19,8 @@ lock = Lock()
 class Fetcher(Thread):
 
     def __init__(self, tasks):
-        Thread.__init__(self)
+        # Thread.__init__(self)
+        super(Fetcher, self).__init__()
         self.tasks = tasks
         self.daemon = True
 
